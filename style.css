@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
-html{
-  overflow: hidden;
-}
-
 body{
-  overflow: hidden;
   color: white;
   margin: 0;
   padding: 0;
