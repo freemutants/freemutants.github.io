@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
+html{
+  overflow: hidden;
+}
+
 body{
+  overflow: hidden;
   color: white;
   margin: 0;
   padding: 0;
@@ -81,8 +86,7 @@ a{
 }
 
 #logo1 img{
-  margin-left: 475px;
-  float: left;
+margin-left: 475px;
 }
 
 #search img{
@@ -625,5 +629,21 @@ label{
 
 
 @media only screen and (max-width:500px){
-  
+#header-nav{
+  display: none;
+}
+#pacman{
+  display: none;
+}
+#search{
+  display: none;
+}
+#logo1 img{
+  margin-left: 100px;
+}
+label{
+  display: inline;
+  margin-left: 5px;
+  margin-top: 0;
+}
 }
