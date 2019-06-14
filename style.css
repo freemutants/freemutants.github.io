@@ -657,6 +657,9 @@ body{
 #search{
   display: none;
 }
+.mySlides img{
+  height: 200px;
+}
 .gameburger{
   display: inline;
 }
