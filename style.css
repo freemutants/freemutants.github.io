@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
+html{
+overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 body{
   color: white;
   margin: 0;
@@ -8,6 +16,7 @@ body{
 font-family: 'Karla', sans-serif;
     letter-spacing: 0;
     background-color: #fff;
+overflow-x: hidden;
 }
 
 a{
@@ -81,7 +90,8 @@ a{
 }
 
 #logo1 img{
-margin-left: 475px;
+margin-left: 35%;
+
 }
 
 #search img{
@@ -127,6 +137,7 @@ ul{
   padding-top: 12px;
   padding-bottom: 9px;
   margin-right: 60px;
+
   display: inline;
 }
 
@@ -201,9 +212,6 @@ padding: 0;
   text-align: center;
 }
 
-.active{
-  background-color: #717171;
-}
 
 .fade {
   -webkit-animation-name: fade;
@@ -611,21 +619,37 @@ cursor: pointer;
   display: none;
 }
 
-label{
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
+.slideshow-container{
+  width: 100%;
+}
+
+.myslides img{
+  float: left;
+  width: 1440px;
+  height: 500px;
+}
+
+.gamemenu{
   display: none;
 }
 
-#toggle{
-  display: none;
+.gamemenu img{
+  margin-top: 0;
 }
 
-
-@media only screen and (max-width:500px){
-#header-nav{
-  display: none;
+@media only screen and (max-width:500px) {
+html{width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow-x: hidden;
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 #pacman{
   display: none;
@@ -633,12 +657,28 @@ label{
 #search{
   display: none;
 }
-#logo1 img{
-  margin-left: 100px;
-}
-label{
+.gameburger{
   display: inline;
-  margin-left: 5px;
-  margin-top: 0;
+}
+#header{
+  height: 62px;
+}
+#header-nav{
+  display: none;
+}
+#logo1 img{
+margin-left:23%;
+margin-top: 5px;
+}
+.redirect{
+  margin-left: 31%;
+  margin-bottom: 5px;
+}
+.gamemenu{
+  display: inline;
+}
+.gamemenu img{
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 }
