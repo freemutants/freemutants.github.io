@@ -7,7 +7,9 @@ overflow-x: hidden;
   padding: 0;
 }
 
-
+.phonemenu{
+  display: none;
+}
 
 body{
   color: white;
@@ -143,6 +145,7 @@ ul{
 
 #header-nav li:hover{
   border-bottom: 3px solid #f3ba22;
+  transition: 0.2s;
 }
 
 #banner{
@@ -281,6 +284,7 @@ padding: 0;
 }
 
 .selection li{
+  cursor: pointer;
   position: relative;
   box-sizing: border-box;
   font-size: 18px;
@@ -325,6 +329,15 @@ padding: 0;
   font-weight: bold;
 }
 
+.ssearch{
+  display: none;
+  float: right;
+}
+
+.ssearch img{
+  margin-right: 15px;
+  margin-top: 18px;
+}
 
 .selection li:before {
     content: "";
@@ -341,9 +354,7 @@ padding: 0;
 
 .selection li:hover{
   color: #e62429;
-  font-family: 'Indie Flower', cursive;
-  font-size: 14px;
-  letter-spacing: 0.8px;
+  transition: 1.0s;
 }
 
 
@@ -595,12 +606,14 @@ color: #999;
   top: 0;
   position: absolute;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .modal-content{
@@ -637,6 +650,70 @@ cursor: pointer;
   margin-top: 0;
 }
 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.a123{
+  padding: 8px;
+  text-decoration: none;
+  font-size: 56px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.a123 a:hover, .a123 a:focus {
+  color: #f1f1f1;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 500px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
 @media only screen and (max-width:500px) {
 html{width: 100%;
 height: 100%;
@@ -664,13 +741,13 @@ body{
   display: inline;
 }
 #header{
-  height: 62px;
+  height: 60px;
 }
 #header-nav{
   display: none;
 }
 #logo1 img{
-margin-left:23%;
+margin-left:21%;
 margin-top: 5px;
 }
 .redirect{
@@ -683,5 +760,49 @@ margin-top: 5px;
 .gamemenu img{
   margin-left: 15px;
   margin-bottom: 15px;
+}
+.characterstitle{
+  font-size: 26px;
+  margin-left: 20px;
+}
+.characterstitle:before, .characterstitle:after{
+  height: 2px;
+  width: 20px;
+}
+.moviestitle{
+  font-size: 26px;
+  margin-left: 20px;
+}
+.moviestitle:before, .moviestitle:after{
+  height: 2px;
+  width: 20px;
+}
+.comicstitle{
+  font-size: 26px;
+  margin-left: 20px;
+}
+.comicstitle:before, .comicstitle:after{
+  height: 2px;
+  width: 20px;
+}
+.showstitle{
+  font-size: 26px;
+  margin-left: 20px;
+}
+.showstitle:before, .showstitle:after{
+  height: 2px;
+  width: 20px;
+}
+.selection{
+  overflow-x: scroll;
+}
+.ssearch{
+  display: inline;
+}
+.bg-modal{
+  overflow-y: auto;
+}
+.modal-content{
+  margin-left: 5px;
 }
 }

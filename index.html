@@ -13,18 +13,42 @@
       <a href="#" id="pacman" ><img src="pacman.png" height="32px" width="32px"></a>
       <a href="" class="gamemenu"><img src="menu.png" height="22px" width="22px"></a>
     <div id="logo1">  <a href="index.html"> <img src="logo.png" height="50px" width="155px"></a></div>
-    <div id="search"> <a href="search.html"> <img src="search.png" height="22px" width="22px"></a></div>
+    <a href="#" class="ssearch" onclick="openNav()"><img src="search.png" height="22px" width="22px"></a>
+    <div id="search" onclick="openNav()"> <a href="#"> <img src="search.png" height="22px" width="22px"></a></div>
   </div>
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+<span class="a123">What are you searching?</span>
+    <a href="#">CHARACTERS</a>
+    <a href="#">MOVIES</a>
+    <a href="#">COMICS</a>
+    <a href="#">TV SHOWS</a>
+  </div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
     <div id="header-nav">
-      <ul><a ><li><span class="gameburger">Game</span></li></a>
-        <a href="allcharacters.html"><li>characters</li></a>
+      <ul><a href="allcharacters.html"><li>characters</li></a>
       <a href="allmovies.html"><li>Movies</li></a>
       <a href="allcomics.html"><li>comics</li></a>
-      <a href="alltvshows.html"><li>tv shows</li></a>
-      <a><li><span class="gameburger">Search</span></li></a>
+      <a href="alltvshows.html"><li>tv shows</li></a></ul>
       </div>
 
-
+<div class="phonemenu">
+  <ul><a href="alltvshows.html"><li>Game</li></a>
+    <a href="allcharacters.html"><li>characters</li></a>
+  <a href="allmovies.html"><li>Movies</li></a>
+  <a href="allcomics.html"><li>comics</li></a>
+  <a href="alltvshows.html"><li>tv shows</li></a></ul>
+</div>
 <div class="bg-modal">
   <div class="modal-content">
     <div class="close">+</div>
@@ -225,6 +249,7 @@ document.querySelector('.close').addEventListener('click',function(){
       <li><a href=""><img src="snap.png" height="23px" width="23px"></a></li><br><br>
         <li><a href=""><img src="linkedin.png" height="23px" width="23px"></a></li>
           <li><a href=""><img src="twitter.png" height="23px" width="23px"></a></li>
+          <li><a href=""><img src="googleplay.png" height="23px" width="23px"></a></li>
 </ul></div></span>
     </div>
 </div>
