@@ -1,53 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Mutants | The Official Site for FREE superhero Movies, characters, comics and TV
-    </title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      </head>
+    <title>Mutant | The Official site for Superhero movies, comics, TV Shows and more</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="icon/png" href="icon.png">
+  </head>
   <body>
-    <div id="header">
-      <a href="#" id="pacman" ><img src="pacman.png" height="32px" width="32px"></a>
-      <a href="" class="gamemenu"><img src="menu.png" height="22px" width="22px"></a>
-    <div id="logo1">  <a href="index.html"> <img src="logo.png" height="50px" width="155px"></a></div>
-    <a href="#" class="ssearch" onclick="openNav()"><img src="search.png" height="22px" width="22px"></a>
-    <div id="search" onclick="openNav()"> <a href="#"> <img src="search.png" height="22px" width="22px"></a></div>
-  </div>
-  <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-<span class="a123">What are you searching?</span>
-    <a href="#">CHARACTERS</a>
-    <a href="#">MOVIES</a>
-    <a href="#">COMICS</a>
-    <a href="#">TV SHOWS</a>
-  </div>
-</div>
-<script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
+    <script>
+    var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-57px";
+  }
+  prevScrollpos = currentScrollPos;
 }
 </script>
-    <div id="header-nav">
-      <ul><a href="allcharacters.html"><li>characters</li></a>
-      <a href="allmovies.html"><li>Movies</li></a>
-      <a href="allcomics.html"><li>comics</li></a>
-      <a href="alltvshows.html"><li>tv shows</li></a></ul>
-      </div>
-
-<div class="phonemenu">
-  <ul><a href="alltvshows.html"><li>Game</li></a>
-    <a href="allcharacters.html"><li>characters</li></a>
-  <a href="allmovies.html"><li>Movies</li></a>
-  <a href="allcomics.html"><li>comics</li></a>
-  <a href="alltvshows.html"><li>tv shows</li></a></ul>
+<div id="header">
+<div class="headertab">
+  <a href="#"><div id="pacman" class="game">
+<img src="pacman.png" alt="">
+  </div></a>
+  <a href="#"><div id="phonemenu" class="game">
+<img src="menu.png" alt="">
+  </div></a>
+  <div class="logoo">
+<img src="logo.png" height="52px" width="180px">
+  </div>
+<a href="search.html" class="search-container"><div class="search">
+<img src="search.png" alt="">
+  </div></a>
+</div>
+<div class="headermenu">
+<ul><a href=""><li>characters</li></a>
+<a href=""><li>movies</li></a>
+<a href=""><li>comics</li></a>
+<a href=""><li>tv shows</li></a></ul>
+</div>
 </div>
 <div class="bg-modal">
   <div class="modal-content">
@@ -106,159 +98,41 @@ function closeNav() {
 
   </div>
 </div>
-
-
-    <div id="banner">
-
-      <div class="slideshow-container">
-
-    <div class="mySlides fade">
-
-    <a href="avengers.html" > <img src="marveluniverse.jpg" width="100%" ></a>
-      <a href="marvel.html"><div class="redirect to">Enter Marvel</div></a>
-    </div>
-
-    <div class="mySlides fade">
-
-    <a href="justiceleague.html">  <img src="dcuniverse.jpg" width="100%"></a>
-      <a href="dc.html"><div class="redirect to">Enter DC</div></a>
-    </div>
-
-      </div>
-      <script>
-      var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2500);
-  }
-      </script>
 <script type="text/javascript">
+document.querySelector('.game').addEventListener('click',function(){
+    document.querySelector('.bg-modal').style.display='flex';
+    body.style.display='fixed';
+});
 document.getElementById('pacman').addEventListener('click',function(){
   document.querySelector('.bg-modal').style.display='flex';
+  body.style.display='fixed';
 });
 document.querySelector('.close').addEventListener('click',function(){
   document.querySelector('.bg-modal').style.display='none';
-  document.querySelector('body').style.display='fixed';
 });
 </script>
-    </div>
-      <div id="featuredcharacters">
-        <div class="characterstitle">
-         FEATURED CHARACTERS
-        </div>
-          <div class="selection"><ul>
-      <li>  <div class="selection1"><img src="thanos.jpg" height="210px" width="183.33px"><br><p class="selectionname">THE MAD TITAN</p><p class="selectionrealname">THANOS</p>
-      </div></li>
-      <li>  <div class="selection2"><img src="captain.jpg"height="210px" width="183.33px"><br><p class="selectionname">CAPTAIN AMERICA</p><p class="selectionrealname">STEVE ROGERS</p>
-      </div></li>
-      <li>  <div class="selection3"><img src="widow.jpg" height="210px" width="183.33px"><br><p class="selectionname">BLACK WIDOW</p><p class="selectionrealname">NATASHA ROMANOFF</p>
-      </div></li>
-      <li>  <div class="selection4"><img src="batman.jpg" height="210px" width="183.33px"><br><p class="selectionname">BATMAN</p><p class="selectionrealname">BRUCE WAYNE</p>
-      </div></li>
-      <li>  <div class="selection5"><img src="thor.jpg" height="210px" width="183.33px"><br><p class="selectionname">THOR</p><p class="selectionrealname">THOR</p>
-      </div></li>
-      <li>  <div class="selection6"><img src="spidy.jpg" height="210px" width="183.33px"><br><p class="selectionname">SPIDER-MAN</p><p class="selectionrealname">PETER PARKER</p>
-      </div></li>
-    </ul>
-    </div>
-  </div>
-  <div id="featuredmovies">
-    <div class="moviestitle">
-     FEATURED MOVIES
-    </div>
-      <div class="selection"><ul>
-  <li>  <div class="selection1"><img src="darknight.jpg" height="210px" width="183.33px"><br><p class="selectionname">BATMAN</p><p class="selectionrealname">THE DARK KNIGHT</p>
-  </div></li>
-  <li>  <div class="selection2"><img src="infinitywar.jpg"height="210px" width="183.33px"><br><p class="selectionname">AVENGERS</p><p class="selectionrealname">INFINITY WAR</p>
-  </div></li>
-  <li>  <div class="selection3"><img src="civilwar.jpg" height="210px" width="183.33px"><br><p class="selectionname">CAPTAIN AMERICA</p><p class="selectionrealname">CIVIL WAR</p>
-  </div></li>
-  <li>  <div class="selection4"><img src="blackpanther.jpg" height="210px" width="183.33px"><br><p class="selectionname">BLACK PANTHER</p><p class="selectionrealname">BLACK PANTHER</p>
-  </div></li>
-  <li>  <div class="selection5"><img src="justiceleague.jpg" height="210px" width="183.33px"><br><p class="selectionname">JUSTICE LEAGUE</p><p class="selectionrealname">JUSTICE LEAGUE</p>
-  </div></li>
-  <li>  <div class="selection6"><img src="smvsbm.jpg" height="210px" width="183.33px"><br><p class="selectionname">BATMAN VS SUPERMAN</p><p class="selectionrealname1">DAWN OF JUSTICE</p>
-  </div></li>
-</ul>
-</div>
-</div>
-<br>
-<div id="featuredcomics">
-  <div class="comicstitle">
-   FEATURED COMICS
-  </div>
-    <div class="selection"><ul>
-<li>  <div class="selection1"><img src="lastknight.jpg" height="210px" width="183.33px"><br><p class="selectionname">BATMAN</p><p class="selectionrealname">LAST KNIGHT ON EARTH</p>
-</div></li>
-<li>  <div class="selection2"><img src="saga.jpg"height="210px" width="183.33px"><br><p class="selectionname">SUPERMAN</p><p class="selectionrealname">THE UNITY SAGA</p>
-</div></li>
-<li>  <div class="selection3"><img src="wintinam.jpg" height="210px" width="183.33px"><br><p class="selectionname">CAPTAIN AMERICA</p><p class="selectionrealname">WINTER IN AMERICA</p>
-</div></li>
-<li>  <div class="selection4"><img src="uncanny.jpg" height="210px" width="183.33px"><br><p class="selectionname">X-MEN</p><p class="selectionrealname">UNCANNY X-MEN</p>
-</div></li>
-<li>  <div class="selection5"><img src="amzspdmn.jpg" height="210px" width="183.33px"><br><p class="selectionname">SPIDER-MAN</p><p class="selectionrealname">AMAZING SPIDER-MAN</p>
-</div></li>
-<li>  <div class="selection6"><img src="wwrebirth.jpg" height="210px" width="183.33px"><br><p class="selectionname">WONDER-WOMAN</p><p class="selectionrealname">REBIRTH OF UNIVERSE</p>
-</div></li>
-</ul>
+<div class="w3-container">
+<div class="w3-content w3-section">
+  <img class="mySlides w3-animate-left" src="marveluniverse.jpg" style="width:100%">
+  <img class="mySlides w3-animate-right" src="dcuniverse.jpg" style="width:100%">
 </div>
 </div>
 
-<div id="featuredtvshows">
-  <div class="showstitle">
-   FEATURED TV SHOWS
-  </div>
-    <div class="selection"><ul>
-<li>  <div class="selection1"><img src="punisher.jpg" height="210px" width="183.33px"><br><p class="selectionname">PUNISHER</p><p class="selectionrealname">THE PUNISHER</p>
-</div></li>
-<li>  <div class="selection2"><img src="dd.jpg"height="210px" width="183.33px"><br><p class="selectionname">DAREDEVIL</p><p class="selectionrealname">FEAR THE DARK</p>
-</div></li>
-<li>  <div class="selection3"><img src="if.jpg" height="210px" width="183.33px"><br><p class="selectionname">IRON FIST</p><p class="selectionrealname">THE IRON FIST</p>
-</div></li>
-<li>  <div class="selection4"><img src="jj.jpg" height="210px" width="183.33px"><br><p class="selectionname">JESSICA JONES</p><p class="selectionrealname">JESSICA JONES</p>
-</div></li>
-<li>  <div class="selection5"><img src="aos.jpg" height="210px" width="183.33px"><br><p class="selectionname">AGENTS OF S.H.I.E.L.D</p><p class="selectionrealname1">AGENTS OF S.H.I.E.L.D</p>
-</div></li>
-<li>  <div class="selection6"><img src="ra.jpg" height="210px" width="183.33px"><br><p class="selectionname">THE RUN-AWAYS</p><p class="selectionrealname">THE RUN-AWAYS</p>
-</div></li>
-</ul>
-</div>
-</div>
+<script>
+var myIndex = 0;
+carousel();
 
-    <div id="footer">
-    <div id="footerredirect">
-      <div class="logofooter"><a href="new.html"> <img src="logofooter.png" height="80px" width="80px"></a></div>
-    <span>  <div class="linklist">  <ul>
-        <li class="footerleft"><a href="">ABOUT ASHISH</a></li>
-          <li class="footerleft"><a href="">ABOUT MARVEL</a></li>
-          <li class="footerleft"><a href="">ABOUT DC </a></li>
-          <li class="footerleft"><a href="">HELP/FAQs</a></li>
-</ul>
-<div class="social"><ul class="listname"> FOLLOW ME<br><br>
-  <li><a href=""><img src="fb.png" height="23px" width="23px"></a></li>
-    <li><a href=""><img src="insta.png" height="23px" width="23px"></a></li>
-      <li><a href=""><img src="snap.png" height="23px" width="23px"></a></li><br><br>
-        <li><a href=""><img src="linkedin.png" height="23px" width="23px"></a></li>
-          <li><a href=""><img src="twitter.png" height="23px" width="23px"></a></li>
-          <li><a href=""><img src="googleplay.png" height="23px" width="23px"></a></li>
-</ul></div></span>
-    </div>
-</div>
-  </div>
-    <div id="production"><ul><li>©2019 MARVEL</li>
-    <li>Made in INDIA by ASHISH YADAV</li>
-    <li>©2019 DC COMICS</li>
-    </ul>
-    </div>
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 1500);
+}
+</script>
   </body>
-
 </html>
