@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Mutant | The Official site for Superhero movies, comics, TV Shows and more</title>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -111,28 +112,159 @@ document.querySelector('.close').addEventListener('click',function(){
   document.querySelector('.bg-modal').style.display='none';
 });
 </script>
-<div class="w3-container">
-<div class="w3-content w3-section">
-  <img class="mySlides w3-animate-left" src="marveluniverse.jpg" style="width:100%">
-  <img class="mySlides w3-animate-right" src="dcuniverse.jpg" style="width:100%">
+
+
+
+
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="description">
+<h4>WATCH INFINITY WAR NOW!</h4><br>
+Watch how all your favourite <br>marvel superheros join<br> hands to defeat the mad titan!
+  </div>
+  <img src="marveluniverse.jpg">
+<a href="#">  <div class="text">ENTER MARVEL</div><a>
 </div>
+
+<div class="mySlides fade">
+  <div class="description">
+<h4>WATCH JUSTICE LEAGUE NOW!</h4><br>
+Watch how all your favourite <br>DC superheros join<br> hands to defeat the mighty<br> SteppenWolf!
+  </div>
+  <img src="dcuniverse.jpg">
+<a href="#">  <div class="text">ENTER DC</div></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="description">
+<h4>READ YOUR <br>FAVOURITE COMICS</h4><br>
+Read all of your<br> favourite Marvel, <br>DC comics now for free.<br>
+  </div>
+  <img src="comics.jpg">
+<a href="#">  <div class="text">READ COMICS</div></a>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center" class="dotcontainer">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
 </div>
 
 <script>
-var myIndex = 0;
-carousel();
+var slideIndex = 0;
+showSlides();
 
-function carousel() {
+function showSlides() {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 1500);
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 </script>
+
+
+
+<div class="featured">
+<div class="featuredtitle">
+featured characters
+</div>
+<div class="scrollmenu">
+<div class="selection">
+  <img src="captain.jpg" alt=""><div class="selectionname">
+    CAPTAIN AMERICA
+  </div>
+  <div class="selectionrealname">
+STEVE ROGERS
+  </div>
+</div>
+<div class="selection">
+  <img src="thanos.jpg" alt=""><div class="selectionname">
+    THE MAD TITAN
+  </div>
+  <div class="selectionrealname">
+THANOS
+  </div>
+</div>
+<div class="selection">
+  <img src="thor.jpg" alt=""><div class="selectionname">
+    THOR
+  </div>
+  <div class="selectionrealname">
+THOR
+  </div>
+</div>
+<div class="selection">
+  <img src="galgadot.jpg" alt=""><div class="selectionname">
+   WONDER WOMAN
+  </div>
+  <div class="selectionrealname">
+DIANA PRINCE
+  </div>
+</div>
+<div class="selection">
+  <img src="widow.jpg" alt=""><div class="selectionname">
+    BLACK WIDOW
+  </div>
+  <div class="selectionrealname">
+NATASHA ROMANOFF
+  </div>
+</div>
+<div class="selection">
+  <img src="batman.jpg" alt=""><div class="selectionname">
+    BATMAN
+  </div>
+  <div class="selectionrealname">
+BRUCE WAYNE
+  </div>
+</div>
+<div class="selection">
+  <img src="spidy.jpg" alt=""><div class="selectionname">
+    SPIDER-MAN
+  </div>
+  <div class="selectionrealname">
+PETER PARKER
+  </div>
+</div>
+<div class="selection">
+  <img src="banner.jpg" alt=""><div class="selectionname">
+    HULK
+  </div>
+  <div class="selectionrealname">
+BRUCE BANNER
+  </div>
+</div>
+<div class="selection">
+  <img src="hawkeye.jpg" alt=""><div class="selectionname">
+   HAWKEYE
+  </div>
+  <div class="selectionrealname">
+CLINT BARTON
+  </div>
+</div>
+<div class="selection">
+  <img src="superman.jpg" alt=""><div class="selectionname">
+   SUPERMAN
+ </div>
+ <div class="selectionrealname">
+ CLARK KENT
+ </div></div>
+</div>
   </body>
 </html>
