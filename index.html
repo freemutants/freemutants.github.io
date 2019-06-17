@@ -25,9 +25,8 @@ window.onscroll = function() {
   <a href="#"><div id="pacman" class="game">
 <img src="pacman.png" alt="">
   </div></a>
-  <a href="#"><div id="phonemenu" class="game">
-<img src="menu.png" alt="">
-  </div></a>
+  <div id="phonemenu" class="phonemenu" ><span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
   <div class="logoo">
 <img src="logo.png" height="52px" width="180px">
   </div>
@@ -266,5 +265,25 @@ CLINT BARTON
  CLARK KENT
  </div></div>
 </div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">GAME</a>
+    <a href="#">CHARACTERS</a>
+    <a href="#">MOVIES</a>
+    <a href="#">COMICS</a>
+    <a href="#">TV SHOWS</a>
+  </div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
   </body>
 </html>
