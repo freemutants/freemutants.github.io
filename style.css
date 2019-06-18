@@ -373,7 +373,7 @@ div.scrollmenu {
 div.scrollmenu a {
   display: inline-block;
   color: white;
-  text-align: center;
+
   padding: 14px;
   text-decoration: none;
 }
@@ -387,13 +387,14 @@ background-color: #151515;
 margin-bottom: 2%;
 
 }
-a img{
-  margin: -14px;
+
+a{
+  margin: 0;
   padding: 0;
 }
+
 .selection:hover{
-  background-color: black;
-  transition: 0.8s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -411,8 +412,8 @@ a img{
 }
 
 .featured a:hover{
-  background-color: black;
-  transition: 0.5s;
+color: #e62429;
+  transition: 0.3s;
 }
 
 .selectionrealname{
