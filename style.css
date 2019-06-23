@@ -646,20 +646,45 @@ a img{
 .logofooter{
   float: left;
   margin-left: 10%;
-  margin-top: 4%;
+  margin-top: 3%;
 }
 .logofooter img{
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 .helpbar{
-  max-width: 700px;
+  width: 50%;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
   font-weight: bold;
 }
+
+.helpbar ul{
+  width: 130px;
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 850px){
+  .helpbar{
+    position: absolute;
+    left: 55%;
+    right: 0;
+    margin: auto;
+    font-weight: bold;
+  }
+  .logofooter{
+    float: left;
+    margin-left: 15%;
+    margin-top: 7%;
+  }
+  .logofooter img{
+    height: 50px;
+    width: 50px;
+  }
+}
+
 .helpbar ul{
   list-style: none;
   margin-top: 3%;
@@ -672,4 +697,26 @@ a img{
 }
 .production{
   display: block;
+}
+@media only screen and (max-width:850){
+  .linksbar{
+    height: 170px;
+    overflow: hidden;
+  }
+  .logofooter{
+    display: inline-block;
+    float: left;
+  }
+  .helpbar{
+    display: inline-block;
+    right: 0;
+    width: 50px;
+    font-size: 15px;
+  }
+  .helpbar ul{
+    right: 0;
+  }
+  .links{
+    display: block;
+  }
 }
